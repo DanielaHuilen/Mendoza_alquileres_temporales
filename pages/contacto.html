@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alquileres en Mendoza</title>
+        <meta name="description" content="HTML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <!-- codigo para letra-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+         
+    </head>
+    
+    
+    <body id="home">
+        <div class="container">
+            <header>
+                <img id="logo" src="/imagenes/Logo.png" alt=""> <!-- Logo en png-->
+
+                <div id="firma">
+                    <h1>Alquileres Temporales</h1>
+                    <h2>Mendoza</h2>
+                </div>
+
+                <nav>
+                    <!-- menu sandwich -->
+                    <div class="menu-toggle">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <!--cierro menu sandwich-->
+
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="departamento1.html">Unique Apartament</a></li>
+                        <li><a href="departamento2.html">Estudio Garibaldi</a></li>
+                        <li><a href="departamento3.html">Mendoza Centro Apartament</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="contenedor_contacto">
+                    
+                <div class="contacto_titulo">
+                     <h2>Formulario de Contacto</h2>
+                </div>
+                
+
+                <section class="contenedor_formulario">
+                    <form action="procesar.php" method="POST">
+
+                        <label for="nombre">Nombre*</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
+                        
+                        <label for="email">Email*</label>
+                        <input type="email" name="email" id="email" placeholder="Tu correo" required>
+
+                        <label for="huespedes">Cantidad de Huéspedes*</label>
+                        <input type="number" maxlength="2" name="huespedes" id="huespedes" placeholder="Cantidad de Huespedes" required>
+
+                        <label for="pais">País de residencia</label>
+                        <input type="text" name="pais" id="pais" placeholder="País de origen">
+
+                        <label for="fecha_ingreso">Fecha de ingreso</label>
+                        <input type="date" name="fecha_ingreso" id="fecha_ingreso">
+
+                        <label for="fecha_egreso">Fecha de Egreso</label>
+                        <input type="date" name="fecha_egreso" id="fecha_egreso">
+
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" placeholder="Realiza tu consulta"></textarea>
+                        
+                        <button type="submit">Enviar</button>
+                    </form>
+                </section>
+            </section>
+
+
+            <section class="contenedor_contacto_titulo">
+                <div class="titulos">
+                    <h2>Información de Contacto</h2>
+                </div>
+            </section>
+
+            <section class="informacion de contacto">
+                <h3 class="contacto_data">WhatsApp : +5471554447444</h3>
+                <h3 class="contacto_data">Email: fasvbe@gmail.com</h3>
+                <h3 class="contacto_data">Instagram: tucasita</h3>
+            </section>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h3>Contacto</h3>
+                        <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
+                        <p><strong>Email:</strong> contacto@lalara</p>
+                    </div>
+            
+                    <div class="footer-section">
+                        <h3>Redes Sociales</h3>
+                        <a href="#" target="_blank">WhatsApp</a>
+                    </div>
+            
+                    <div class="footer-section">
+                        <h3>Enlaces Rápidos</h3>
+                        <a href="index.html">Inicio</a>
+                        <a href="pages/contacto.html">Contacto</a>
+                    </div>
+                </div>
+            
+                <div class="footer-bottom">
+                    <p>&copy; 2025 The VID. Todos los derechos reservados.</p>
+                </div>
+            </footer>
+
+            <!--vinculo con js-->
+            <script src="../script.js"></script>
+            
+
+        
+    </body>
+</html>
