@@ -80,22 +80,25 @@ const modal = document.getElementById("modal"); // Modal
 const modalImg = document.getElementById("modal-img"); // Imagen dentro del modal
 const closeModal = document.getElementById("close"); // Botón de cierre
 
-// Evento para abrir el modal con la imagen clickeada
-galleryImages.forEach(img => {
-    img.addEventListener("click", () => {
-        modal.style.display = "flex"; // Mostrar modal
-        modalImg.src = img.src; // Asignar la imagen al modal
+// Comprueba que los elementos de la galería existan antes de añadir eventos
+if (galleryImages.length > 0 && modal && modalImg && closeModal) {
+    // Evento para abrir el modal con la imagen clickeada
+    galleryImages.forEach(img => {
+        img.addEventListener("click", () => {
+            modal.style.display = "flex"; // Mostrar modal
+            modalImg.src = img.src; // Asignar la imagen al modal
+        });
     });
-});
 
-// Evento para cerrar el modal al hacer clic en el botón "X"
-closeModal.addEventListener("click", () => {
-    modal.style.display = "none"; // Ocultar modal
-});
-
-// Evento para cerrar modal al hacer clic fuera de la imagen
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
+    // Evento para cerrar el modal al hacer clic en el botón "X"
+    closeModal.addEventListener("click", () => {
         modal.style.display = "none"; // Ocultar modal
-    }
-});
+    });
+
+    // Evento para cerrar modal al hacer clic fuera de la imagen
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none"; // Ocultar modal
+        }
+    });
+}
